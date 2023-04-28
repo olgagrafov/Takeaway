@@ -4,17 +4,17 @@ import { SvgXml as SVG } from "react-native-svg";
 import { SvgXml } from "react-native-svgxml-web";
 import open from "../../../../assets/open";
 
-const OpenIcon = () => {
+const OpenIcon = ({ width = 24, height = 24 }) => {
   if (Platform.OS === "web") {
     return (
       <>
-        <SvgXml width={40} height={40} xml={open} />
+        <SvgXml width={width} height={height} xml={open} />
       </>
     );
   } else {
     return (
       <>
-        <SVG xml={open} />
+        <SVG xml={open} width={width} height={height} />
       </>
     );
   }
