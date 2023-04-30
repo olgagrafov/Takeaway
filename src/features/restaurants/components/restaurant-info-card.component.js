@@ -56,6 +56,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
           <Text variant="caption">{address}</Text>
         </Info>
       </RestaurantCard>
+      <Spacer position="bottom" size="large" />
     </>
   );
 };
