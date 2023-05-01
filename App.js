@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unstable-nested-components */
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import React from "react";
 import { Text } from "react-native";
@@ -9,6 +10,7 @@ import {
   Oswald_400Regular,
 } from "@expo-google-fonts/oswald";
 import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
+import { Ionicons } from "@expo/vector-icons";
 
 import { theme } from "./src/infrastructure/theme";
 
@@ -39,13 +41,27 @@ export default function App() {
     </SafeArea>
   );
 
+  const TAB_ICON = {
+    Restaurants: "md-restaurant",
+    Map: "md-map",
+    Settings: "md-settings",
+  };
   const Tab = createBottomTabNavigator();
+  const createScreenOptions = ({ route }) => {
+    return {
+      tabBarIcon: ({ size, color }) => (
+        <Ionicons name={TAB_ICON[route.name]} size={size} color={color} />
+      ),
+      tabBarActiveTintColor: "tomato",
+      tabBarInactiveTintColor: "gray",
+    };
+  };
 
   return (
     <>
       <ThemeProvider theme={theme}>
         <NavigationContainer>
-          <Tab.Navigator>
+          <Tab.Navigator screenOptions={createScreenOptions}>
             <Tab.Screen name="Restaurants" component={RestaurantsScreen} />
             <Tab.Screen name="Map" component={Map} />
             <Tab.Screen name="Settings" component={Settings} />
