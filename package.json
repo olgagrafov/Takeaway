@@ -34,6 +34,7 @@
     "react-native-svgxml-web": "^2.5.0",
     "react-native-web": "~0.18.10",
     "react-native-web-maps": "^0.3.0",
+    "react-native-webview": "11.26.0",
     "styled-components": "^5.3.10"
   },
   "devDependencies": {
