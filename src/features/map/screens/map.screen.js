@@ -2,7 +2,6 @@ import React, { useContext, useState, useEffect } from "react";
 import MapView from "react-native-maps";
 import { Marker, Callout } from "react-native-maps";
 import styled from "styled-components/native";
-//import MapView from "react-native-web-maps"; -?????
 
 import { LocationContext } from "../../../services/location/location.context";
 import { RestaurantsContext } from "../../../services/restaurants/restaurants.context";
