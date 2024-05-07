@@ -11,9 +11,9 @@ import { MapScreen } from "../../../src/features/map/screens/map.screen";
 import { AuthenticationContext } from "../../services/authentication/authentication.context";
 
 const TAB_ICON = {
-  Restaurants: "md-restaurant",
-  Map: "md-map",
-  Settings: "md-settings",
+  Restaurants: "restaurant",
+  Map: "map",
+  Settings: "settings",
 };
 const Tab = createBottomTabNavigator();
 const createScreenOptions = ({ route }) => {
